@@ -1,9 +1,45 @@
 # find-duplicates
 A Python utility that identifies duplicate files using file size prechecks and SHA-256 content hashing.
 
+## Usage
+
+Run the script:
+
+```bash
+python find-duplicates.py
+```
+
+You will be prompted for a directory to scan:
+
+```text
+Folder to scan:
+/Users/example/Documents
+```
+
+The script accepts both relative and absolute paths.
+
+## Output
+
+Results are written to:
+
+```text
+DuplicateFiles.txt
+```
+
+If duplicates are found, the report lists the original file and any matching duplicates.
+
+## Exclusions
+
+The utility skips:
+
+- Empty files
+- Symbolic links
+- `.DS_Store`
+- `.localized`
+
 ## Performance Notes
 
-The utility was tested against several real-world datasets.
+The utility was tested against several datasets.
 
 | Dataset Type | Files Scanned | Files Hashed |
 |--------------|--------------:|-------------:|
